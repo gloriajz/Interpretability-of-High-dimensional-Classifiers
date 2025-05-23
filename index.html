@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interpretability of High-Dimensional Classifiers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+    }
+    h2 {
+      color: #444;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.4rem;
+    }
+    ul {
+      margin-left: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f1f1f1;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interpretability of High-Dimensional Classifiers</h1>
+    <p>Gloria J. Yang – UCL BSc Dissertation Project</p>
+  </header>
+  <main>
+    <section>
+      <h2>🔍 Overview</h2>
+      <p>This project presents a comprehensive exploration of classification techniques and their interpretability within machine learning. We examine logistic regression, random forests, and neural networks across various datasets. The primary focus lies in understanding model decision-making through variable importance methods, Shapley values, and active subspace techniques.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Experiments</h2>
+      <p>Three experiments were conducted to evaluate model interpretability:</p>
+      <ul>
+        <li><strong>Iris Dataset:</strong> Classifying species (Virginica vs Versicolor) and interpreting feature influence.</li>
+        <li><strong>Simulated Datasets:</strong> Exploring synthetic data with both linear and non-linear structures to test sensitivity and variable interactions.</li>
+        <li><strong>Credit Risk Dataset:</strong> Assessing the impact of borrower features on loan status prediction using interpretable models.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Methods</h2>
+      <ul>
+        <li><strong>Variable Importance:</strong> Feature relevance quantified through z-scores, impurity reductions, and neural weight attributions.</li>
+        <li><strong>Shapley Values:</strong> Feature contributions analyzed using cooperative game theory and implemented with fastshap.</li>
+        <li><strong>Active Subspace:</strong> Gradient-based PCA for identifying the most influential directions in high-dimensional space.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Results</h2>
+      <p>Key findings across all experiments:</p>
+      <ul>
+        <li><strong>Iris:</strong> Petal length and petal width were the most discriminative features.</li>
+        <li><strong>Simulation:</strong> Dataset 1 highlighted single-variable dominance; Dataset 2 revealed joint-variable interactions.</li>
+        <li><strong>Credit Risk:</strong> Debt-to-income ratio, loan grade, and home ownership were the top predictive features for loan approval.</li>
+      </ul>
+      <p>Interpretability plots available in repository:
+        <ul>
+          <li>Variable Importance</li>
+          <li>Shapley Value</li>
+          <li>Mean Gradient & PCA (Active Subspace)</li>
+        </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>📁 Repository Files</h2>
+      <ul>
+        <li><code>Credit_Risk.R</code> – Code for credit risk model and plots</li>
+        <li><code>Simulation_v2.R</code> – Code for simulation-based analysis</li>
+        <li><code>IrisCode.R</code> – Classifier + interpretation on iris dataset</li>
+        <li><code>*.png</code> – All interpretability visualizations</li>
+        <li><code>credit_risk_dataset.csv</code>, <code>functions.R</code> – Supporting data and helper functions</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Gloria J. Yang – UCL Department of Statistical Science. All rights reserved.
+  </footer>
+</body>
+</html>
